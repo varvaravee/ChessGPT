@@ -43,5 +43,5 @@ struct ChessPiece{
 }
 
 
-struct ChessPiece board[8][8]
+struct ChessPiece board[8][8];
 
