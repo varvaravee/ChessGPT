@@ -12,13 +12,22 @@ int main()
     
     //prototypes
     void mainMenu();
+    int accessPiece();
+    int canMove(board);
+    int movePiece( Piece piece);
+    board displayBoard(board);
+    int checkWin(board);
+    void switchPlayer();
+    
 
 
 
     //calls mainMenu
     mainMenu();
 
-    //Functions
+    //***Functions***
+    
+    //mainMenu function
     void mainMenu()
     {
         int choice;
@@ -42,6 +51,15 @@ int main()
                 scanf(" %d", &playerSide);
             
                 //case statements
+                
+                
+                //assign side of chess board to player
+                
+                //initialize board, display to user
+                
+                //ask user for their move
+                
+                //check if 
 
             }
 
@@ -64,5 +82,20 @@ int main()
                 printf("\nYou have selected a wrong number. You will be returned to the main menu.\n");
             }
         } while (choice != 3);
-}
+    }
+
+    // accessPiece function
+    
+    //canMove function
+    
+    //movePiece function
+    
+    //displayBoard function
+    
+    //checkWin function
+    
+    //switchPlayer function
+    
+    
+
 }
