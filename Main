@@ -23,21 +23,23 @@ int main()
     {
         int choice;
 
-        //while loop that presents menu until exit of application
+        // do while loop that presents menu until exit of application
         do {
             printf("Please make a selection from the main menu below.\n \n");
             printf("1. Start a game!\n");
             printf("2. Tell a joke.\n");
             printf("3. Exit.");
 
-
+            scanf(" %d", &choice);
+            
+            
             //validate input and start game if input is 1
             if (choice == 1)
             {
-                char playerSide;
+                int playerSide;
                 printf("\nGreat choice! Please select your preference for the color of your pieces.\n");
-                printf("Input 'B' for black pieces and 'W' for white pieces. White pieces move first.\n");
-                scanf(" %c", &playerSide);
+                printf("Input 1 for white pieces and 2 for black pieces. White pieces move first.\n");
+                scanf(" %d", &playerSide);
             
                 //case statements
 
@@ -49,6 +51,12 @@ int main()
                 printf("Who's there?\n");
                 printf("Your mom!\n");
                 printf("Now play some chess!\n");
+            }
+            
+            else if (choice == 3)
+            {
+                printf("Thanks for playing! Have a great day!\n");
+                printf("Exiting program.\n");
             }
 
             else 
