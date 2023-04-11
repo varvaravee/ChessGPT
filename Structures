@@ -24,10 +24,24 @@ enum Player{
     White,
 }
 
+enum pieceFile{
+A,
+B,
+C,
+D,
+E,
+F,
+G,
+H,
+}
+
 struct ChessPiece{
     enum PieceType type;
     enum Player player;
+    enum pieceFile piecefile;
+    int rank;
 }
+
 
 struct ChessPiece board[8][8]
 
