@@ -1,0 +1,31 @@
+## Makefile for chessgame ##
+
+#variables#
+cc     = gcc
+CFLAGS = -Wall -std=c11
+DEBUG  = -g -DDEBUG
+LFLAGS = -Wall $(DEBUG)
+
+targets := ChessGame ChessGameUI
+objs_game := chessboard.o pieces.o king.o queen.o bishop.o knight.o rook.o pawn.o isKingChecked.o isCheckMate.o mainMethod.o moveAI.o
+objs_ui := chessboard.o pieces.o king.o queen.o bishop.o knight.o  pawn.o  mainMethodUI.o
+
+#targets
+all: $(targets)
+
+#executable file#
+ChessGame: $(objs_game)
+	$(cc) $(LFLAGS) -o $@ $^
+
+ChessGameUI: $(objs_ui)
+	$(cc) $(LFLAGS) -o $@ $^ -lSDL
+
+#compilation files#
+%o:%c
+	$(cc) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f *.o
+	rm -f ChessGame
+	rm -f ChessGameUI
+
